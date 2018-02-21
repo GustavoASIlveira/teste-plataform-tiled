@@ -42,16 +42,16 @@ function create(){
 	controls = tiledGame.input.keyboard.createCursorKeys();
 	
 	this.jBtn = tiledGame.add.button(520,280,'jBtn');
-	this.jBtn.onInputOver.add(jump,this);
+	this.jBtn.onInputDown.add(jump,this);
 	this.jBtn.alpha = .5;
 	this.jBtn.fixedToCamera = true;
 	this.jBtn.cameraOffset.setTo(520,280);
 	
 	this.lBtn = tiledGame.add.button(20,560,'lBtn');
-	this.lBtn.onInputOver.add(function(){
+	this.lBtn.onInputDown.add(function(){
 		mvLeft = true;
 	},this);
-	this.lBtn.onInputOut.add(function(){
+	this.lBtn.onInputUp.add(function(){
 		mvLeft = false;
 	},this);
 	this.lBtn.alpha = .5;
@@ -59,10 +59,10 @@ function create(){
 	this.lBtn.cameraOffset.setTo(20,280);
 	
 	this.rBtn = tiledGame.add.button(120,560,'rBtn');
-	this.rBtn.onInputOver.add(function(){
+	this.rBtn.onInputDown.add(function(){
 		mvRight = true;
 	},this);
-	this.rBtn.onInputOut.add(function(){
+	this.rBtn.onInputUp.add(function(){
 		mvRight = false;
 	},this);
 	this.rBtn.alpha = .5;
