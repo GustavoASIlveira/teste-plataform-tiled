@@ -1,4 +1,4 @@
-var tiledGame = new Phaser.Game(640,360,Phaser.AUTO,'',{preload:preload,create:create,update:update});
+var tiledGame = new Phaser.Game(640,360,Phaser.CANVAS,'',{preload:preload,create:create,update:update});
 var map,backgroundLayer,blockLayer,player,controls,mvLeft = mvRight = false;
 
 function preload(){
